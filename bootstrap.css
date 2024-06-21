@@ -1,0 +1,14 @@
+
+.hero {
+    background-image: url(images/clouds.jpeg);
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 100px 0;
+}   
+.footer {
+    text-align: center;
+    color: black; 
+    padding: 20px;
+}
