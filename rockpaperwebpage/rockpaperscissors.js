@@ -1,5 +1,8 @@
 const hands = ['rock', 'paper', 'scissors'];
 
+let playerScore = 0;
+let computerScore = 0;
+
 function getComputerHand() {
     const randomIndex = Math.floor(Math.random() * hands.length);
     return hands[randomIndex];
@@ -19,10 +22,12 @@ function playGame() {
         (playerHand === 'scissors' && computerHand === 'paper')
     ) {
         result = 'You win!';
+        playerScore++;
     } else {
         result = 'You lose!';
+        computerScore++;
     }
 
     const resultsDiv = document.getElementById('results');
-    resultsDiv.textContent = `Player chose: ${playerHand}.  Computer chose: ${computerHand}.  ${result}`;
+    resultsDiv.textContent = `Player chose: ${playerHand}.  Computer chose: ${computerHand}.  ${result}  Score: Player ${playerScore} - Computer ${computerScore}`;
 }
