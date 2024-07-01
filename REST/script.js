@@ -8,6 +8,7 @@ document.getElementById('getAllPosts').addEventListener('click', function one() 
 document.getElementById('getPost10').addEventListener('click', function two() {
     return fetch('https://jsonplaceholder.typicode.com/posts/10')
         .then(response => response.json())
+        // The json() method is a built-in method of the Response object that uses the parse method to convert a JSON string into a JavaScript object(when getting info from web to local).
         .then((json) => console.log(json))
         .then(() => document.getElementById('pTwo').innerHTML = 'Post 10 logged to console.');
 });
@@ -16,6 +17,7 @@ document.getElementById('createPost').addEventListener('click', function three()
     return fetch('https://jsonplaceholder.typicode.com/posts', {
         method: 'POST',
         body: JSON.stringify({
+            // stringify() is used to create a JSON string out of an object or array(used when pushing from local to web)
             title: 'title',
             body: 'body',
             userId: 1,
