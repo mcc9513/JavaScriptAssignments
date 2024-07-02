@@ -34,7 +34,9 @@ function initializeCart() {
     
     const itemName = document.getElementById('itemName').value;
     const itemPrice = parseFloat(document.getElementById('itemPrice').value);
-    const itemId = Date.now().toString();
+    // parseFloat converts string to floating-point number (num w decimals)
+      const itemId = Date.now().toString();
+      //creates uniqe id using current time stamp
      
     const item = {
       id: itemId,
