@@ -47,3 +47,12 @@ body {
 .crossed {
     text-decoration: line-through;
 }
+to-do/
+├── dist/
+├── node_modules/
+├── src/
+│   └── todo.ts
+├── styles.css
+├── tsconfig.json
+├── index.html
+└── package.json
